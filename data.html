@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unsolved Mysteries — Data</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+            padding-top:120px;
+            background: #0b0b0b; /* Dark background */
+            color: #e4e4e4; /* Light text color */
+            font-family: 'Cormorant Garamond', serif; 
+            overflow-x: hidden; /* Prevent horizontal scroll */
+           
+        } 
+
+        /* NAVBAR */
+        .navbar {
+            background: rgba(30, 30, 30, 0.95); /*Dark Background*/
+            backdrop-filter: blur(8px); /*Blur effect*/
+            padding: 18px; 
+            
+        }
+
+        .navbar-brand { /* Logo font style */
+            font-family: 'Special Elite', monospace !important;
+            font-size: 1.6rem !important;
+            color: #e4e4e4 !important; /* Light color */
+            transition: color 0.4s ease; /* Smooth transition */
+        }
+        /* colour becomes red after white  (Unsolved bharat) */
+        .navbar-brand:hover {
+            color: #ff2b2b !important; /* Red on hover */
+        }
+
+        .navbar a.nav-link { /* Navbar links style */
+            color: #e4e4e4 !important; /* Light color */
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.7px; /* Slight letter spacing */
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        /* Underline ho rha for home,contact */
+        .navbar a.nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0; /* Initially no underline */
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #ffffff;  /* White underline */
+            transition: width 0.3s ease;
+        }
+        
+        .navbar a.nav-link:hover {
+            color: #ff2b2b !important; /* Red on hover for home ,contact */
+        }
+
+        .navbar a.nav-link:hover::after {
+            width: 100%; /* Underline expands on hover */
+        } 
+    :root{--bg:#0b0b0b; --accent:#8b0000;}
+
+    body {
+      background:var(--bg);
+      color:#eee;
+      font-family:"Cormorant Garamond", serif; 
+      margin:0;
+    }
+    header{
+      background:#0f0f10;
+      padding:14px 0;
+      border-bottom:3px solid var(--accent);
+    }
+
+    .brand{font-family:"Special Elite",cursive;}
+    
+    .panel {
+      background:#0f0f10;
+      border:1px solid rgba(139,0,0,0.18);
+      padding:20px;
+      max-width:1100px;
+      margin:36px auto;
+      border-radius:10px;
+    }
+
+    table.table thead th{
+      background:rgba(139,0,0,0.12);
+      color:#fff;
+      
+    }
+    table.table tbody td{
+      border-color:rgba(255,255,255,0.03);
+    }
+
+    footer{
+      text-align:center;
+      color:white;
+      padding:18px 0;
+      font-size:0.9rem;
+    }
+  </style>
+</head>
+<body>
+ <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Unsolved Bharat</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="cases.html">Cases</a></li>
+                <li class="nav-item"><a class="nav-link" href="data.html">Data</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  <main class="container">
+    <div class="panel">
+      <h3>Archive Data (Bootstrap Table)</h3>
+      <p>Below is a table presenting key data on some of India's most intriguing unsolved mysteries. This data includes case IDs, names, years, locations, types, and current statuses.</p>
+
+      <div class="table-responsive">
+        <table class="table table-dark table-striped table-hover align-middle">
+          <thead>
+            <tr>
+              <th>Case ID</th>
+              <th>Case Name</th>
+              <th>Year</th>
+              <th>Location</th>
+              <th>Type</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>Netaji Subhas Chandra Bose – The Disappearance Mystery</td>
+              <td>1945?</td>
+              <td>Taipei / Unknown</td>
+              <td>Political Disappearance</td>
+              <td>Unsolved</td>             
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>The Burari Deaths – Delhi’s Chilling Case</td>
+              <td>2018</td>
+              <td>Delhi, India</td>
+              <td>Mass Death / Ritual Pattern</td>                
+              <td>Unsolved</td>
+            </tr>
+
+            <tr>
+              <td>003</td>
+              <td>The Poisoned Lake Mystery — Lonar Crater</td>
+              <td>Unknown</td>
+              <td>Maharashtra, India</td>
+              <td>Geological / Chemical Anomaly</td>
+              <td>Unsolved</td>
+            </tr>
+            <tr>
+              <td>004</td>
+              <td>Roopkund Skeleton Lake — Frozen Secret</td>
+              <td>~850 AD (bones)</td>
+              <td>Uttarakhand, India</td>
+              <td>Mass Death / Archeological Mystery</td>
+              <td>Unsolved</td>
+            </tr>
+
+            <tr>
+              <td>005</td>
+              <td>Jamunia Forest Signals — Untraceable Frequency</td>
+              <td>2011–2021</td>
+              <td>Madhya Pradesh, India</td>
+              <td>Unknown Radio Signals</td>
+              <td>Unsolved</td>
+            </tr>
+
+            <tr>
+            <td>006</td>
+              <td>Kodinhi Twin Phenomenon — Kerala’s Genetic Puzzle</td>
+              <td>1950s–Present</td>
+              <td>Kerala, India</td>
+              <td>Genetic / Biological Mystery</td>
+              <td>Unsolved</td>
+            </tr>
+
+            <tr>
+              <td>007</td>
+              <td>Aksai Chin Frozen Bodies — High-Altitude Mystery</td>
+              <td>2020s</td>
+              <td>Ladakh (Aksai Chin)</td>
+              <td>Unidentified Bodies</td>
+              <td>Unsolved</td>
+            </tr>
+
+            <tr>
+              <td>008</td>
+              <td>Dumas Beach EMF Anomaly — The Whispering Coast</td>
+              <td>Ongoing</td>
+              <td>Gujarat, India</td>
+              <td>EMF / Acoustic Anomaly</td>
+              <td>Unsolved</td>
+            </tr>
+
+            <tr>
+              <td>009</td>
+              <td>The Stoneman Killer — Shadowy Serial Murderer</td>
+              <td>1985–1989</td>
+              <td>Mumbai & Kolkata</td>
+              <td>Serial Killer Case</td>
+                <td>Unsolved</td>
+              </tr>
+          </tbody>
+
+        </table>
+      </div>
+
+  <footer class="text-center py-4">© 2025 Unsolved Bharat — Designed by Jeeya Chavan (A2-33) and Khushi Jaiswal(A2-25)</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

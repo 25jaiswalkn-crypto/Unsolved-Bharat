@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unsolved Mysteries — Cases</title>
+
+  <!-- Fonts & Bootstrap -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+            padding-top: 120px; /* Space for fixed navbar */
+            background: #0b0b0b; /* Dark background */
+            color: #e4e4e4; /* Light text color */
+            font-family: 'Cormorant Garamond', serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+           
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: rgba(30, 30, 30, 0.95); /*Dark Background*/
+            backdrop-filter: blur(8px); /*Blur effect*/
+            padding: 18px; 
+            
+        }
+
+        .navbar-brand { /* Logo font style */
+            font-family: 'Special Elite', monospace !important;
+            font-size: 1.6rem !important;
+            color: #e4e4e4 !important; /* Light color */
+            transition: color 0.4s ease; /* Smooth transition */
+        }
+        /* colour becomes red after white  (Unsolved bharat) */
+        .navbar-brand:hover {
+            color: #ff2b2b !important; /* Red on hover */
+        }
+
+        .navbar a.nav-link { /* Navbar links style */
+            color: #e4e4e4 !important; /* Light color */
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.7px; /* Slight letter spacing */
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        /* Underline ho rha for home,contact */
+        .navbar a.nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0; /* Initially no underline */
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #ffffff;  /* White underline */
+            transition: width 0.3s ease;
+        }
+        
+        .navbar a.nav-link:hover {
+            color: #ff2b2b !important; /* Red on hover for home ,contact */
+        }
+
+        .navbar a.nav-link:hover::after {
+            width: 100%; /* Underline expands on hover */
+        } 
+
+        /* MYSTERY CARDS */
+
+    .mystery-card {
+            background: #1a1a1a;
+            border: 1px solid #404040;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+    .mystery-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0px 15px 30px rgba(255, 43, 43, 0.3);
+            border-color: #ff2b2b;
+        }
+
+    .mystery-card img {
+            height: 250px;
+            object-fit: cover;
+            filter: brightness(0.8);
+        }
+   .mystery-card .card-body {
+            padding: 25px;
+        }
+
+    .mystery-card .card-title {
+            font-family: 'Cinzel', serif;
+            color: #ff2b2b;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+    .mystery-card .card-text {
+            color: #d4d4d4;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* CENTER BUTTON */
+    .mystery-btn1 {
+            display: block;
+            /*box on center and small*/
+            margin: center;
+                       
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #f3efef;
+            padding: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        
+        }
+    .mystery-btn1:hover {
+            box-shadow: 0 0 20px rgba(255, 43, 43, 0.6);
+            background: rgba(255, 43, 43, 0.1);
+            color: #ffffff;
+        }
+
+    .mystery-btn1:active {    /*when clicked*/
+            background:red !important; 
+            color: #000000 !important;
+        }
+
+    footer {
+        text-align:center;
+        color:white;
+        padding:18px 0;
+        font-size:0.9rem;
+    }    
+        
+  </style>
+</head>
+<body>
+
+  
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Unsolved Bharat</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="cases.html">Cases</a></li>
+                <li class="nav-item"><a class="nav-link" href="data.html">Data</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container">
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card mystery-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCbpTeWK250Fxks_QPqEYhY7PyiMJn43nVQg&s?w=800" class="card-img-top" alt="Case 1">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Netaji Subhas Chandra Bose – The Disappearance Mystery</h4>
+                    <p class="card-text">India’s biggest political mystery.
+                    The alleged plane crash has no verified body, no confirmed evidence.</p>
+                    <a href="cases.html" class="btn mystery-btn1">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mystery-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BM2EwNzMyYjAtODcwYy00OWYyLThkMDctNzdlOTQ0MzExYzRlXkEyXkFqcGc@._V1_QL75_UY281_CR18,0,500,281_.jpg?w=800" class="card-img-top" alt="Case 2">
+                <div class="card-body text-center">
+                    <h4 class="card-title">The Burari Deaths (Delhi, 2018) – The Chilling Cold Case</h4>
+                    <p class="card-text">On 1 July 2018, Delhi police entered a house in Burari and discovered one of the most disturbing scenes in Indian crime history —
+                    11 members of the Bhatia family found dead, hanging in a ritual-like formation.</p>
+                    <a href="cases.html" class="btn mystery-btn1">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mystery-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF5kVbv__ENxvU1A4BMCra-hy0eKIzDfGPvg&s?w=800" class="card-img-top" alt="Case 3">
+                <div class="card-body text-center">
+                    <h4 class="card-title">The Poisoned Lake Mystery — Lonar Crater, Maharashtra</h4>
+                    <p class="card-text">Lonar Lake is a nearly perfect circular lake formed by a meteor traveling at 90,000 km/hr that smashed into Earth thousands of years ago.</p>
+                    <a href="cases.html" class="btn mystery-btn1">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mystery-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHPwbNsry5hSbYk6l3HoqpgrO0IwjTi3GG2g&s?w=800" class="card-img-top" alt="Case 4">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Roopkund Skeleton Lake — Himalayas' Frozen Secret</h4>
+                    <p class="card-text">Hundreds of ancient skeletons lie around a high-altitude lake in Uttarakhand. No one knows who they were, or how they all died together.</p>
+                    <a href="cases.html" class="btn mystery-btn1">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card mystery-card">
+                <img src="https://cdn.outsideonline.com/wp-content/uploads/2020/02/18/rainforest-sound-wave_h.jpg?w=800" class="card-img-top" alt="Case 4">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Jamunia Forest Signals — The Untraceable Frequency</h4>
+                    <p class="card-text">Villagers reported strange coded radio-like signals echoing through the forest at night. Investigation teams found no transmitters… and the frequency doesn’t match any known band.</p>
+                    <a href="cases.html" class="btn mystery-btn1">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mystery-card">
+                <img src="https://static.toiimg.com/thumb/92915876/Kodinhi-Kerala.jpg?width=636&height=358&resize=4?w=800" class="card-img-top" alt="Case 5">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Kodinhi Twin Phenomenon — The Genetic Puzzle</h4>
+                    <p class="card-text">A small Kerala village where twins are born at 6 times the global average. No genetic mutation, no environmental trigger — scientists are still clueless.</p>
+                    <a href="cases.html" class="btn mystery-btn1">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mystery-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMVUEI_qzaLi3ZtQloR2je9K61aKFOhGc_Tw&s?w=800" class="card-img-top" alt="Case 6">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Aksai Chin Frozen Bodies — The High-Altitude Mystery</h4>
+                    <p class="card-text">Patrol teams discovered multiple frozen bodies in inaccessible ice caves. They aren’t soldiers. They aren’t trekkers. Their identity and cause of death remain unknown.</p>
+                    <a href="cases.html" class="btn mystery-btn1">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mystery-card">
+                <img src="https://static.toiimg.com/photo/62553668/.jpg?w=800" class="card-img-top" alt="Case 7">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Dumas Beach EMF Anomaly — The Whispering Coast</h4>
+                    <p class="card-text">Visitors claim to hear whispers from the sea after midnight. EMF meters show strange spikes and sound waves with no physical source. No official explanation.</p>
+                    <a href="cases.html" class="btn mystery-btn1">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mystery-card">
+                <img src="https://c.files.bbci.co.uk/17155/production/_86494549_img_9792.jpg?w=800" class="card-img-top" alt="Stoneman Murders">
+                <div class="card-body text-center">
+                    <h4 class="card-title">The Stoneman Killer — India's Shadowy Serial Murderer</h4>
+                    <p class="card-text">
+                        A mysterious killer struck Mumbai and Kolkata between 1985–1989, 
+                        murdering pavement sleepers with a stone. No suspect was ever confirmed, 
+                        no motive was found, and the killer disappeared without a trace.
+                    </p>
+                    <a href="cases.html" class="btn mystery-btn1">Read More</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<footer class="text-center py-4">© 2025 Unsolved Bharat — Designed by Jeeya Chavan (A2-33) and Khushi Jaiswal(A2-25)</footer>
+</body>
+</html>
